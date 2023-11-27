@@ -1,7 +1,7 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 
 import {Task} from "../../Classes/Goal.js"
 import {GlobalState} from "../../GlobalState/GlobalState.jsx";
@@ -14,11 +14,29 @@ export function NewTask() {
   const [date, setDate] = useState('');
   const [difficulty, setDifficulty] = useState('');
   const [category, setCategory] = useState('');
+  const [visibility,setVisibility]=useState(true)
+  const {uncompletedTasks,categories,formVisibility,difficultyOptions,priorityOptions}= useGlobalState();
 
-  const {uncompletedTasks,categories}= useGlobalState();
-  const priorityOptions = ['Urgent', 'Medium', 'Low']; // Add your priority options
-  const difficultyOptions = ['Hard', 'Medium', 'Easy']; // Add your difficulty options
+    useEffect(() => {
 
+    if (formVisibility) {
+      setVisibility((vis)=>{
+          vis=true
+      })
+    }
+  }, [formVisibility]); // Run this effect when formVisibility changes
+
+    function closeForm(e){
+        setVisibility(visibility=>{
+            visibility=false;
+
+        })
+        console.log("ESTA PASANDO O NO")
+        e.preventDefault();
+        GlobalState.set({
+      formVisibility: false,
+    });
+    }
    function handleSubmit(e) {
     e.preventDefault();
 
@@ -45,14 +63,14 @@ export function NewTask() {
     }
   }
 
-  return (
+  return formVisibility?(
       <>
-    <div className={"new-task-container"}>
+    <div className={`new-task-container ${formVisibility?null:"hidden"}`}>
 
 
     <form className='task-form' onSubmit={handleSubmit}>
          <div>
-         <label htmlFor='title'>Title:</label>
+         <label htmlFor='title'>Title: {formVisibility?"TRUE":"FALSE"}</label>
         <input
         type='text'
         placeholder='Task Title'
@@ -140,10 +158,10 @@ export function NewTask() {
 
 
       {/* Close (cross) button */}
-      <button className='btn btn-close' >
+      <button className='btn btn-close' onClick={closeForm}>
         &#10006; {/* Unicode character for "X" */}
       </button>
          </div>
            </>
-  );
+  ):null;
 }

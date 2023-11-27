@@ -11,7 +11,7 @@ import {Task} from "./Classes/Goal.js";
 const initialGlobalState = {
   count: 0,
   completedTasks:[],
-  uncompletedTasks:[new Task("Tarea", "saf", "Urgent", "00/5048/000", "HARD", "Family")],
+  uncompletedTasks:[new Task("Tarea", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa", "Urgent", "15/08/2023", "Hard", "Family")],
   failedTasks:[],
   goals:[],
   mode:"home",
@@ -23,7 +23,10 @@ const initialGlobalState = {
   { name: 'Community', color: '#78db27' },
   { name: 'Health', color: '#ea8c02' },
 ],
-  formVisibility:true
+  priorityOptions : ['Urgent', 'Important', 'Low'], // Add your priority options
+  difficultyOptions : ['Hard', 'Medium', 'Easy'], // Add your difficulty options
+  formVisibility:true,
+  filter: "pending"
 };
 
 class Global extends React.Component {
@@ -98,7 +101,7 @@ function App() {
         <Route path="/home" element={<Global Root={() => <Home />} />} />
         <Route path="/some-component" element={<Global Root={() => <SomeComponent />} />} />
         <Route path="/counter-display" element={<Global Root={() => <CounterDisplay />} />} />
-        {/* Add additional routes as needed */}
+
       </Routes>
         </div>
     </Router>

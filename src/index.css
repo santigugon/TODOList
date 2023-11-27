@@ -95,6 +95,7 @@ h1 {
   line-height: 1.4;
   background-color: #44403c;
   margin-bottom: 16px;
+  margin-top: 20px;
   padding: 16px 24px;
   letter-spacing: -1px;
   border-radius: 16px;
@@ -123,11 +124,13 @@ h1 {
 }
 
 .vote-buttons {
+  margin-top: 15px;
   margin-left: auto;
   flex-shrink: 0;
-
+  margin-bottom: 35px;
   display: flex;
   gap: 8px;
+  justify-content: center;
 }
 
 .vote-buttons button {
@@ -201,6 +204,9 @@ ul {
   background-image: none;
 
 }
+.nav-btn-logo{
+  display: none;
+}
 
 /* FORM */
 .task-form {
@@ -264,10 +270,9 @@ ul {
 }
 .custom-dropdown:hover{
   cursor: pointer;
- -webkit-appearance: none;
 }
 /* Hide the default arrow */
-.custom-dropdown select {
+.custom-dropdown {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -282,11 +287,11 @@ ul {
 }
 
 /* Style the dropdown options */
-.custom-dropdown select:hover {
+.custom-dropdown:hover {
   border-color: #aaa;
 }
 
-.custom-dropdown select:focus {
+.custom-dropdown:focus {
   outline: none;
   border-color: #3b82f6; /* Add a focus style */
   box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* Add a focus style */
@@ -314,6 +319,11 @@ ul {
   display: block;
   width: 100%;
 }
+.task-characteristics{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .new-task-container{
   width: fit-content;
@@ -331,7 +341,9 @@ ul {
 label{
   font-size: 1.5vw;
 }
-
+span{
+  font-style: italic;
+}
 @media (max-width: 1000px) {
 
   label{
@@ -349,6 +361,7 @@ label{
     flex-direction: column;
     align-items: stretch;
     width: auto;
+    text-align: left;
   }
 
   .task-form input,
@@ -374,7 +387,14 @@ label{
     row-gap: 15px;
     justify-content: center;
   }
-  aside{
-    display: none;
-  }
+.nav-btn-name{
+  display: none;
 }
+.nav-btn-logo{
+  display: block;
+}
+}
+.cancel{
+  background-color: red;
+}
+
