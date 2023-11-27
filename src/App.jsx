@@ -11,17 +11,17 @@ import {Task} from "./Classes/Goal.js";
 const initialGlobalState = {
   count: 0,
   completedTasks:[],
-  uncompletedTasks:[new Task("Tarea", "Dificil", "Urgent", "00/5048/000", "HARD")],
+  uncompletedTasks:[new Task("Tarea", "saf", "Urgent", "00/5048/000", "HARD", "Family")],
   failedTasks:[],
   goals:[],
   mode:"home",
   categories: [
-  { name: 'work', color: '#f63b51' },
-  { name: 'personal', color: '#1ba316' },
-  { name: 'family', color: '#44c7ef' },
-  { name: 'friends', color: '#eab308' },
-  { name: 'community', color: '#78db27' },
-  { name: 'health', color: '#ea8c02' },
+  { name: 'Work', color: '#f63b51' },
+  { name: 'Personal', color: '#1ba316' },
+  { name: 'Family', color: '#44c7ef' },
+  { name: 'Friends', color: '#eab308' },
+  { name: 'Community', color: '#78db27' },
+  { name: 'Health', color: '#ea8c02' },
 ],
   formVisibility:true
 };

@@ -40,16 +40,16 @@ const eraseTask=()=>{
     console.log(uncompletedTasks)
          }
   return (
-    <li className='task'>
+    <li className='task' style={{ border: `2px solid ${CATEGORIES.find(cat => cat.name === task.getCategory()).color}` }}>
         <div className={"task-card-grid"}>
             <div>
 
 
 
 
-      <h5>
+      <h3>
           {task.getTitle()}
-      </h5>
+      </h3>
         <p>
         {task.getDescription()}
 
@@ -60,7 +60,8 @@ const eraseTask=()=>{
 
         }}
       >
-        {task.getCategory()}
+          Category:
+         { `    ${task.getCategory()}`}
       </span>
       <div className='vote-buttons'>
         <button onClick={completeTask}

@@ -9,6 +9,7 @@ body {
   color: #fafaf9;
   font-family: 'Sono', sans-serif;
   padding: 48px 64px 0px;
+  overflow-x: hidden;
 }
 
 .hidden {
@@ -89,6 +90,7 @@ h1 {
 }
 
 .task {
+
   font-size: 20px;
   line-height: 1.4;
   background-color: #44403c;
@@ -251,7 +253,7 @@ ul {
 }
 
 .section-container{
-  width: auto;
+  width: 100%;
   margin: 0px 50px;
 
 }
@@ -304,10 +306,14 @@ ul {
   margin-top: 20px; /* Add margin to separate the button */
 }
 .task-card-grid{
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
+.task-card-grid p{
+  display: block;
+  width: 100%;
+}
 
 .new-task-container{
   width: fit-content;
@@ -322,7 +328,18 @@ ul {
   border-radius: 50%;
   padding: 16px;
 }
+label{
+  font-size: 1.5vw;
+}
+
 @media (max-width: 1000px) {
+
+  label{
+  font-size:2.5vw;
+}
+  h1{
+    font-size: 30px;
+  }
   body {
     /* padding: 32px 48px; */
   }
@@ -356,5 +373,8 @@ ul {
   flex-direction: column;
     row-gap: 15px;
     justify-content: center;
+  }
+  aside{
+    display: none;
   }
 }
