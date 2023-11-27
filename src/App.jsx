@@ -99,8 +99,12 @@ function App() {
       {/* Specify routes using the Routes component */}
       <Routes>
         <Route path="/home" element={<Global Root={() => <Home />} />} />
-        <Route path="/some-component" element={<Global Root={() => <SomeComponent />} />} />
-        <Route path="/counter-display" element={<Global Root={() => <CounterDisplay />} />} />
+        <Route path="/some-component" element={<Global Root={() => <CounterDisplay />} />} />
+        <Route path="/example" element={<Global Root={() => <CounterDisplay />} />} />
+        <Route path="/society" element={<Global Root={() => <CounterDisplay />} />} />
+        <Route path="/entertainment" element={<Global Root={() => <CounterDisplay />} />} />
+        <Route path="/health" element={<Global Root={() => <CounterDisplay />} />} />
+         <Route path="/news" element={<Global Root={() => <CounterDisplay />} />} />
 
       </Routes>
         </div>
