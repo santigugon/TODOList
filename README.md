@@ -1,8 +1,8 @@
-# React + Vite
+# TO DO APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In this app you will be able to add, and remove the possible tasks you need to realize
+There are a couple important characteristics for this TO DO App
+-We use a global context for components to communicate in between each other, and items stored in it
+-ES6 methods are used for its right funcionality
+-Mobile friendly
+-Uses React with Vite and Routing to allow switching between several Nav tabsj

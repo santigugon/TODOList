@@ -5,9 +5,25 @@ import './App.css';
 import { GlobalState } from './GlobalState/GlobalState.jsx';
 import CounterDisplay from './CounterTest/display.jsx';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import {Nav,Aside} from "./Nav.jsx";
+import {Task} from "./Classes/Goal.js";
 
 const initialGlobalState = {
   count: 0,
+  completedTasks:[],
+  uncompletedTasks:[new Task("Tarea", "Dificil", "Urgent", "00/5048/000", "HARD")],
+  failedTasks:[],
+  goals:[],
+  mode:"home",
+  categories: [
+  { name: 'work', color: '#f63b51' },
+  { name: 'personal', color: '#1ba316' },
+  { name: 'family', color: '#44c7ef' },
+  { name: 'friends', color: '#eab308' },
+  { name: 'community', color: '#78db27' },
+  { name: 'health', color: '#ea8c02' },
+],
+  formVisibility:true
 };
 
 class Global extends React.Component {
@@ -61,15 +77,21 @@ class Global extends React.Component {
   }
 }
 
+
+
+const useGlobalState = () => React.useContext(GlobalState);
+
 function App() {
+    const { mode } = useGlobalState();
   return (
     <Router>
-      <div>
+     <Global Root={() => <Nav />} />
+       <div className={"main-structure"}>
+      <Global Root={() => <Aside />} />
+
         {/* Use Link components for navigation */}
-        <Link to="/home">Home</Link>
-        <Link to="/some-component">Some Component</Link>
-        <Link to="/counter-display">Counter Display</Link>
-      </div>
+
+
 
       {/* Specify routes using the Routes component */}
       <Routes>
@@ -78,7 +100,9 @@ function App() {
         <Route path="/counter-display" element={<Global Root={() => <CounterDisplay />} />} />
         {/* Add additional routes as needed */}
       </Routes>
+        </div>
     </Router>
+
   );
 }
 
