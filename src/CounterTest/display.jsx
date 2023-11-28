@@ -4,7 +4,7 @@ const useGlobalState = () => React.useContext(GlobalState);
 export function CounterDisplay() {
   return (
     <>
-      <div className="section-container">
+      <div className="section-container" style={{ backgroundColor: "none", padding: "20px" }}>
         <div>
           <h2>Lorem Ipsum Page</h2>
           <p>

@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Nav, Aside } from "./Nav.jsx";
 import { Task } from "./Classes/Goal.js";
 import { NewTask } from "./Home/Components/NewTask.jsx";
+import ExtraPage from "./CounterTest/extraPage.jsx";
+import ExtraPage2 from "./CounterTest/ExtraPage2.jsx";
+import ExtraPage3 from "./CounterTest/ExtraPage3.jsx";
 
 const initialGlobalState = {
   count: 0,
@@ -120,23 +123,27 @@ function App() {
           />
           <Route
             path="/example"
-            element={<Global Root={() => <CounterDisplay />} />}
+            element={<Global Root={() => <ExtraPage />} />}
           />
           <Route
             path="/society"
-            element={<Global Root={() => <CounterDisplay />} />}
+            element={<Global Root={() => <ExtraPage2 />} />}
           />
           <Route
             path="/entertainment"
-            element={<Global Root={() => <CounterDisplay />} />}
+            element={<Global Root={() => <ExtraPage3 />} />}
           />
           <Route
             path="/health"
-            element={<Global Root={() => <CounterDisplay />} />}
+            element={<Global Root={() => <ExtraPage />} />}
+          />
+           <Route
+            path="/history"
+            element={<Global Root={() => <ExtraPage />} />}
           />
           <Route
             path="/news"
-            element={<Global Root={() => <CounterDisplay />} />}
+            element={<Global Root={() => <ExtraPage2 />} />}
           />
         </Routes>
       </div>
