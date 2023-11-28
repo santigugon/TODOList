@@ -22,14 +22,14 @@ export class Goal {
 }
 
 export class Task extends Goal {
-  constructor(title, description, priority, date, difficulty,category) {
+  constructor(title, description, priority, date, difficulty, category) {
     super(title, description);
     this.priority = priority;
     this.date = date;
     this.difficulty = difficulty;
     this.progress = 0; // Default progress is set to 0
     this.completed = false; // Default completion status is set to false
-    this.category=category;
+    this.category = category;
   }
 
   getPriority() {
@@ -72,13 +72,13 @@ export class Task extends Goal {
     this.completed = completed;
   }
 
-  setCategory(category){
-    this.category=category;
+  setCategory(category) {
+    this.category = category;
   }
-  getCategory(){
+  getCategory() {
     return this.category;
   }
 }
 
 // Example usage:
-export default Goal
+export default Goal;

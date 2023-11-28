@@ -7,7 +7,7 @@
 body {
   background-color: #292524;
   color: #fafaf9;
-  font-family: 'Sono', sans-serif;
+  font-family: "Sono", sans-serif;
   padding: 48px 64px 0px;
   overflow-x: hidden;
 }
@@ -80,7 +80,7 @@ section {
 h1 {
   font-size: 42px;
   text-transform: uppercase;
-  font-family: 'Coiny', sans-serif;
+  font-family: "Coiny", sans-serif;
   line-height: 1;
   margin-top: 6px;
 }
@@ -90,7 +90,6 @@ h1 {
 }
 
 .task {
-
   font-size: 20px;
   line-height: 1.4;
   background-color: #44403c;
@@ -116,7 +115,7 @@ h1 {
 .tag {
   text-transform: uppercase;
   font-size: 14px;
-  font-family: 'Coiny', sans-serif;
+  font-family: "Coiny", sans-serif;
   padding-top: 3px;
   padding-left: 10px;
   padding-right: 10px;
@@ -173,7 +172,7 @@ ul {
 
 .btn {
   border: none;
-  font-family: 'Coiny', sans-serif;
+  font-family: "Coiny", sans-serif;
   line-height: 1;
   text-transform: uppercase;
   font-size: 17px;
@@ -202,9 +201,8 @@ ul {
 .btn-category {
   width: 100%;
   background-image: none;
-
 }
-.nav-btn-logo{
+.nav-btn-logo {
   display: none;
 }
 
@@ -248,27 +246,25 @@ ul {
   margin-right: 18px;
 }
 
-
-.main-structure{
+.main-structure {
   display: flex;
 }
 
-.logo-img{
+.logo-img {
   height: auto;
   width: 500px;
 }
 
-.section-container{
+.section-container {
   width: 100%;
   margin: 0px 50px;
-
 }
 
 .custom-dropdown {
   position: relative;
   display: inline-block;
 }
-.custom-dropdown:hover{
+.custom-dropdown:hover {
   cursor: pointer;
 }
 /* Hide the default arrow */
@@ -310,46 +306,46 @@ ul {
 .task-form .btn {
   margin-top: 20px; /* Add margin to separate the button */
 }
-.task-card-grid{
+.task-card-grid {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.task-card-grid p{
+.task-card-grid p {
   display: block;
   width: 100%;
 }
-.task-characteristics{
+.task-characteristics {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.new-task-container{
+.new-task-container {
   width: fit-content;
   position: relative;
 }
 
-.btn-close{
-  content:"";
+.btn-close {
+  content: "";
   position: absolute;
   top: -10px;
   right: -5px;
   border-radius: 50%;
   padding: 16px;
 }
-label{
+label {
   font-size: 1.5vw;
+  margin-right: 10px;
 }
-span{
+span {
   font-style: italic;
 }
 @media (max-width: 1000px) {
-
-  label{
-  font-size:2.5vw;
-}
-  h1{
+  label {
+    font-size: 2.5vw;
+  }
+  h1 {
     font-size: 30px;
   }
   body {
@@ -368,33 +364,32 @@ span{
   .task-form select {
     width: auto;
   }
-  .task-card-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-}
+  .task-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-  .btn-close{
-  content:"";
-  position: absolute;
-  top: -5px;
-  right: -12px;
-  border-radius: 50%;
+  .btn-close {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    border-radius: 50%;
     padding: 16px 16px;
-}
-  .header{
+  }
+  .header {
     display: flex;
-  flex-direction: column;
+    flex-direction: column;
     row-gap: 15px;
     justify-content: center;
   }
-.nav-btn-name{
-  display: none;
+  .nav-btn-name {
+    display: none;
+  }
+  .nav-btn-logo {
+    display: block;
+  }
 }
-.nav-btn-logo{
-  display: block;
-}
-}
-.cancel{
+.cancel {
   background-color: red;
 }
-

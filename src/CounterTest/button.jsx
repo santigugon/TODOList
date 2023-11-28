@@ -1,5 +1,5 @@
 import React from "react";
-import {GlobalState} from "../GlobalState/GlobalState.jsx";
+import { GlobalState } from "../GlobalState/GlobalState.jsx";
 const useGlobalState = () => React.useContext(GlobalState);
 export default function SomeComponent() {
   const { count } = useGlobalState();
