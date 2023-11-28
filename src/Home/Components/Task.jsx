@@ -232,7 +232,7 @@ export function TaskCard({ task }) {
                 Difficulty: {task.getDifficulty()}{" "}
                 {task.getDifficulty() === "Hard"
                   ? "🚨"
-                  : task.getDifficulty() === "Important"
+                  : task.getDifficulty() === "Medium"
                   ? "🔔"
                   : "🟢"}
               </p>
@@ -240,7 +240,7 @@ export function TaskCard({ task }) {
                 Priority: {task.getPriority()}{" "}
                 {task.getPriority() === "Urgent"
                   ? "🚨"
-                  : task.getPriority() === "Medium"
+                  : task.getPriority() === "Important"
                   ? "🔔"
                   : "🟢"}
               </p>
