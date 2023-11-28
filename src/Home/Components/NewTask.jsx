@@ -149,7 +149,7 @@ export function NewTask() {
         </form>
 
         {/* Close (cross) button */}
-        <button className="btn btn-close" onClick={closeForm}>
+        <button className="btn btn-close hidden" onClick={closeForm}>
           &#10006; {/* Unicode character for "X" */}
         </button>
       </div>

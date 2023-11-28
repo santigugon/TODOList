@@ -4,7 +4,7 @@ import SomeComponent from "./CounterTest/button.jsx";
 import "./App.css";
 import { GlobalState } from "./GlobalState/GlobalState.jsx";
 import CounterDisplay from "./CounterTest/display.jsx";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, Navigate  } from "react-router-dom";
 import { Nav, Aside } from "./Nav.jsx";
 import { Task } from "./Classes/Goal.js";
 import { NewTask } from "./Home/Components/NewTask.jsx";
@@ -116,6 +116,8 @@ function App() {
 
         {/* Specify routes using the Routes component */}
         <Routes>
+           <Route path="/" element={<Navigate to="/home" />} />
+
           <Route path="/home" element={<Global Root={() => <Home />} />} />
           <Route
             path="/some-component"
